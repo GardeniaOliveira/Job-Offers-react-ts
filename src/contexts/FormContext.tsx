@@ -5,7 +5,7 @@ import { State } from "../types/State";
 // import { Action } from "../types/Action";
 
 type Action = {
-  type: FormAction;
+  type: FormActions;
   payload: any;
 };
 
@@ -30,7 +30,7 @@ type FormProviderProps = {
 const FormContext = createContext<ContextType | undefined>(undefined);
 
 //reducer
-export enum FormAction {
+export enum FormActions {
   setCurrentStep,
   setName,
   setLevel,
@@ -39,20 +39,20 @@ export enum FormAction {
 }
 const FormReducer = (state: State, action: Action) => {
   switch (action.type) {
-    case FormAction.setCurrentStep:
+    case FormActions.setCurrentStep:
       //pass the initial state (...state) to the action and return the state after the action
       return { ...state, currentStep: action.payload };
 
-    case FormAction.setName:
+    case FormActions.setName:
       return { ...state, name: action.payload };
 
-    case FormAction.setLevel:
+    case FormActions.setLevel:
       return { ...state, level: action.payload };
 
-    case FormAction.setEmail:
+    case FormActions.setEmail:
       return { ...state, email: action.payload };
 
-    case FormAction.setGithub:
+    case FormActions.setGithub:
       return { ...state, github: action.payload };
 
     default:
