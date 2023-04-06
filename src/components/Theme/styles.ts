@@ -19,7 +19,7 @@ export const Steps = styled.div`
   display: flex;
 `;
 
-export const SideBar = styled.div`
+export const Sidebar = styled.div`
   width: 250px;
   border-right: 1px solid #16195c;
 `;
