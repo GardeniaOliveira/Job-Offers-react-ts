@@ -1,13 +1,15 @@
-import { ChangeEvent, useEffect } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as C from "./styles";
 import { Theme } from "../../components/Theme";
 import { useForm, FormActions } from "../../contexts/FormContext";
+import { validName } from "../../utils/Regex";
 
 export const FormStep1 = () => {
   const navigate = useNavigate();
   //state has the data and dispatch changes the data
   const { state, dispatch } = useForm();
+  const [_, setNameErr] = useState(false);
 
   useEffect(() => {
     dispatch({
@@ -26,7 +28,12 @@ export const FormStep1 = () => {
 
   const handleNextStep = () => {
     if (state.name !== "") {
-      navigate("/step2");
+      if (!validName.test(state.name)) {
+        setNameErr(true);
+        alert("Please enter a valid name");
+      } else {
+        navigate("/step2");
+      }
     } else {
       alert("Please enter your name");
     }
