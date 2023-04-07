@@ -46,24 +46,35 @@ export const FormStep2 = () => {
         <p>Choose your level:</p>
         <hr />
         <SelectOptions
-          title="I'm beginner"
+          title="I'm Junior"
           description="I'm a developer for less than two years"
           icon="🥳"
           selected={state.level === 0}
           onClick={() => {
             setLevel(0);
-            setTitle("Beginner");
+            setTitle("Junior");
           }}
         />
 
         <SelectOptions
-          title="I'm Developer"
-          description="I've been programming for 2 years or more"
+          title="I'm Mid"
+          description="I've been programming for 3 years or more"
           icon="😎"
           selected={state.level === 1}
           onClick={() => {
             setLevel(1);
-            setTitle("Developer");
+            setTitle("Mid");
+          }}
+        />
+
+        <SelectOptions
+          title="I'm Senior"
+          description="I've been programming for 6 years or more"
+          icon="😎"
+          selected={state.level === 2}
+          onClick={() => {
+            setLevel(2);
+            setTitle("Senior");
           }}
         />
         <button>
