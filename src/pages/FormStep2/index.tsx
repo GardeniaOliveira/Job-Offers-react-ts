@@ -4,7 +4,6 @@ import * as C from "./styles";
 import { Theme } from "../../components/Theme";
 import { useForm, FormActions } from "../../contexts/FormContext";
 import { SelectOptions } from "../../components/SelectOptions";
-import { title } from "process";
 
 export const FormStep2 = () => {
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ export const FormStep2 = () => {
         payload: 2,
       });
     }
-  }, []);
+  }, [dispatch, navigate, state.name]);
 
   const handleNextStep = () => {
     navigate("/step3");
@@ -51,7 +50,10 @@ export const FormStep2 = () => {
           description="I'm a developer for less than two years"
           icon="🥳"
           selected={state.level === 0}
-          onClick={() => setLevel(0)}
+          onClick={() => {
+            setLevel(0);
+            setTitle("Beginner");
+          }}
         />
 
         <SelectOptions
@@ -59,7 +61,10 @@ export const FormStep2 = () => {
           description="I've been programming for 2 years or more"
           icon="😎"
           selected={state.level === 1}
-          onClick={() => setLevel(1)}
+          onClick={() => {
+            setLevel(1);
+            setTitle("Developer");
+          }}
         />
         <button>
           {" "}

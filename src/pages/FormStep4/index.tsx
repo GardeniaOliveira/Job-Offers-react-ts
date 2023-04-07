@@ -30,7 +30,7 @@ export const FormStep4 = () => {
           Name : <span>{state.name}</span>{" "}
         </p>
         <p>
-          Level :<span> {state.level}</span>{" "}
+          Level :<span> {state.title}</span>{" "}
         </p>
         <p>
           Email :<span> {state.email}</span>{" "}
