@@ -45,15 +45,22 @@ export const FormStep4 = () => {
         </p>
       </C.Container>
 
-      <h1> Job offers</h1>
+      <C.Title2> Job offers</C.Title2>
+
       {jobs.map((job) => (
-        <C.Container>
-          <p>{job.job_title}</p>
-          <p>
+        <C.Card>
+          <p className="job-title">{job.job_title}</p>
+          <p className="description">
             Description : <span>{job.job_description}</span>{" "}
           </p>
           <p>
             Type : <span>{job.job_employment_type}</span>{" "}
+          </p>
+          <p>
+            Experience :{" "}
+            <span>
+              {job.job_required_experience.required_experience_in_months} months
+            </span>{" "}
           </p>
           <p>
             Company : <span>{job.employer_name}</span>{" "}
@@ -66,7 +73,7 @@ export const FormStep4 = () => {
           <p>
             URL :<span>{job.job_apply_link}</span>{" "}
           </p>
-        </C.Container>
+        </C.Card>
       ))}
     </Theme>
   );
