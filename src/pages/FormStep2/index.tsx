@@ -4,7 +4,7 @@ import * as C from "./styles";
 import { Theme } from "../../components/Theme";
 import { useForm, FormActions } from "../../contexts/FormContext";
 import { SelectOptions } from "../../components/SelectOptions";
-import { setMaxListeners } from "events";
+import { title } from "process";
 
 export const FormStep2 = () => {
   const navigate = useNavigate();
@@ -31,6 +31,13 @@ export const FormStep2 = () => {
       payload: level,
     });
   };
+  const setTitle = (title: string) => {
+    dispatch({
+      type: FormActions.setTitle,
+      payload: title,
+    });
+  };
+
   return (
     <Theme>
       <C.Container>

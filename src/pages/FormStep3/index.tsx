@@ -37,6 +37,7 @@ export const FormStep3 = () => {
   const handleNextStep = () => {
     if (state.email !== "" && state.github !== "") {
       console.log(state);
+      navigate("/step4");
     } else {
       alert("Please, type the fields below");
     }

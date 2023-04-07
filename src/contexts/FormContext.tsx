@@ -17,6 +17,7 @@ type ContextType = {
 const initialData: State = {
   currentStep: 0,
   name: "",
+  title: "",
   level: 0,
   email: "",
   github: "",
@@ -34,6 +35,7 @@ export enum FormActions {
   setCurrentStep,
   setName,
   setLevel,
+  setTitle,
   setEmail,
   setGithub,
 }
@@ -48,6 +50,9 @@ const FormReducer = (state: State, action: Action) => {
 
     case FormActions.setLevel:
       return { ...state, level: action.payload };
+
+    case FormActions.setTitle:
+      return { ...state, title: action.payload };
 
     case FormActions.setEmail:
       return { ...state, email: action.payload };
