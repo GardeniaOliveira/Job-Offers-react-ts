@@ -15,10 +15,19 @@ export const FormStep4 = () => {
       navigate("/");
     } else if (state.email === "" || state.github === "") {
       navigate("/step3");
-    } else {
-      jobSearchApi().then((response: any) => {
+    } else if (state.title === "Junior") {
+      jobSearchApi("junior developer").then((response: any) => {
         setJobs(response.data);
       });
+    } else if (state.title === "Mid") {
+      jobSearchApi("mid developer").then((response: any) => {
+        setJobs(response.data);
+      });
+    } else if (state.title === "Senior") {
+      jobSearchApi("senior developer").then((response: any) => {
+        setJobs(response.data);
+      });
+    } else {
       dispatch({
         type: FormActions.setCurrentStep,
         payload: 4,
