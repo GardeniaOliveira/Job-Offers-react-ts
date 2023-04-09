@@ -4,12 +4,12 @@ import * as C from "./styles";
 import { Theme } from "../../components/Theme";
 import { Footer } from "../../components/Footer";
 import { useForm, FormActions } from "../../contexts/FormContext";
-import jobSearchApi from "../../data/jobSearchApi";
+import jobSearchApi, { Job } from "../../data/jobSearchApi";
 
 export const FormStep4 = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useForm();
-  const [jobs, setJobs] = useState<any[]>([]);
+  const [jobs, setJobs] = useState<Job[]>([]);
   console.log(jobs);
   useEffect(() => {
     if (state.name === "") {
@@ -66,12 +66,19 @@ export const FormStep4 = () => {
               />
             </div>
           )}
-          {jobs.map((job) => (
-            <C.Card>
+          {jobs.map((job, key) => (
+            <C.Card key={key}>
               <p className="job-title">{job.job_title}</p>
               <p className="description">
                 Description : <span>{job.job_description}</span>{" "}
               </p>
+
+              {job.job_benefits ? (
+                <p>
+                  Benefits:
+                  <span> {job.job_benefits?.join(", ")}</span>
+                </p>
+              ) : null}
               <p>
                 Type : <span>{job.job_employment_type}</span>{" "}
               </p>
@@ -79,13 +86,23 @@ export const FormStep4 = () => {
               <p>
                 Company : <span>{job.employer_name}</span>{" "}
               </p>
-              <p>
-                Location : {<span>{job.job_city}</span>} -
-                {<span>{job.job_country}</span>}
-              </p>
+              {job.job_city ? (
+                <p>
+                  Benefits:
+                  <span>
+                    {" "}
+                    {job.job_city} - {job.job_country}
+                  </span>
+                </p>
+              ) : (
+                <p>
+                  Benefits:
+                  <span> {job.job_country}</span>
+                </p>
+              )}
 
               <p>
-                URL :<a href="">{job.job_apply_link}</a>
+                Apply Link :<a href="">{job.job_apply_link}</a>
               </p>
             </C.Card>
           ))}

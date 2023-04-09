@@ -1,5 +1,22 @@
 import axios from "axios";
-// const axios = require("axios");
+
+const ApiKey = process.env.REACT_APP_API_KEY;
+
+export type Job = {
+  job_title: string;
+  job_benefits: string[];
+  employer_company_type: string;
+  employer_name: string;
+  job_country: string;
+  job_city?: string;
+  job_description: string;
+  job_employment_type: string;
+  job_apply_link: string;
+};
+
+type ApiResponse = {
+  data: Job[];
+};
 
 const getAxiosConfig = (query: string) => {
   return {
@@ -11,13 +28,13 @@ const getAxiosConfig = (query: string) => {
       num_pages: "1",
     },
     headers: {
-      "X-RapidAPI-Key": "bb85ebefd4msh809b9e07ecf1c1fp18952cjsnf00f90f7e721",
+      "X-RapidAPI-Key": ApiKey,
       "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
     },
   };
 };
 
-const jobSearchApi = async (query: string) => {
+const jobSearchApi = async (query: string): Promise<ApiResponse> => {
   return new Promise((resolve, reject) => {
     axios
       .request(getAxiosConfig(query))

@@ -68,6 +68,7 @@ export const FormStep3 = () => {
             Your email:
             <input
               type="email"
+              placeholder="example@example.com"
               value={state.email}
               onChange={handleEmailChange}
             />
@@ -77,6 +78,7 @@ export const FormStep3 = () => {
             Your GitHub:
             <input
               type="url"
+              placeholder="https://github.com/example"
               value={state.github}
               onChange={handleGithubChange}
             />
