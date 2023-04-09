@@ -29,6 +29,7 @@ export const CardContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  padding: 40px;
 `;
 export const Title2 = styled.div`
   text-align: center;
@@ -38,12 +39,12 @@ export const Title2 = styled.div`
   color: white;
 `;
 export const Card = styled.div`
+  width: 100%;
+  max-width: 980px;
   border: 2px solid rgb(37, 205, 137);
   border-radius: 10px;
   padding: 20px;
-  margin: 20px;
-  max-width: 980px;
-
+  margin: 20px 0;
   h1 {
     font-size: 26px;
     margin: 0;

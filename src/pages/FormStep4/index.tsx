@@ -57,7 +57,7 @@ export const FormStep4 = () => {
         </C.Container>
 
         <C.CardContainer>
-          <C.Title2> Job offers</C.Title2>
+          <C.Title2>Offers for your level:</C.Title2>
           {jobs.length <= 0 && (
             <div className="loading">
               <img
