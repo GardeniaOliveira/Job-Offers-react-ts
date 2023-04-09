@@ -88,7 +88,7 @@ export const FormStep3 = () => {
               Previous
             </Link>{" "}
           </button>
-          <button onClick={handleNextStep}>Finish registration</button>
+          <button onClick={handleNextStep}>Finish</button>
         </C.Container>
       </Theme>
       <Footer />

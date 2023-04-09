@@ -55,42 +55,42 @@ export const FormStep4 = () => {
             GitHub :<span> {state.github}</span>{" "}
           </p>
         </C.Container>
+
+        <C.CardContainer>
+          <C.Title2> Job offers</C.Title2>
+          {jobs.length <= 0 && (
+            <div className="loading">
+              <img
+                src="https://i.pinimg.com/originals/49/23/29/492329d446c422b0483677d0318ab4fa.gif"
+                alt="Loading..."
+              />
+            </div>
+          )}
+          {jobs.map((job) => (
+            <C.Card>
+              <p className="job-title">{job.job_title}</p>
+              <p className="description">
+                Description : <span>{job.job_description}</span>{" "}
+              </p>
+              <p>
+                Type : <span>{job.job_employment_type}</span>{" "}
+              </p>
+
+              <p>
+                Company : <span>{job.employer_name}</span>{" "}
+              </p>
+              <p>
+                Location : {<span>{job.job_city}</span>} -
+                {<span>{job.job_country}</span>}
+              </p>
+
+              <p>
+                URL :<a href="">{job.job_apply_link}</a>
+              </p>
+            </C.Card>
+          ))}
+        </C.CardContainer>
       </Theme>
-
-      <C.CardContainer>
-        <C.Title2> Job offers</C.Title2>
-        {jobs.length <= 0 && (
-          <div className="loading">
-            <img
-              src="https://i.pinimg.com/originals/49/23/29/492329d446c422b0483677d0318ab4fa.gif"
-              alt="Loading..."
-            />
-          </div>
-        )}
-        {jobs.map((job) => (
-          <C.Card>
-            <p className="job-title">{job.job_title}</p>
-            <p className="description">
-              Description : <span>{job.job_description}</span>{" "}
-            </p>
-            <p>
-              Type : <span>{job.job_employment_type}</span>{" "}
-            </p>
-
-            <p>
-              Company : <span>{job.employer_name}</span>{" "}
-            </p>
-            <p>
-              Location : {<span>{job.job_city}</span>} -
-              {<span>{job.job_country}</span>}
-            </p>
-
-            <p>
-              URL :<a href="">{job.job_apply_link}</a>
-            </p>
-          </C.Card>
-        ))}
-      </C.CardContainer>
       <Footer />
     </>
   );

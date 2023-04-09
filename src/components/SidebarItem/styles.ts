@@ -8,6 +8,13 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     text-decoration: none;
+    @media (max-width: 960px) {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
   }
 `;
 
@@ -22,12 +29,18 @@ export const Title = styled.div`
   margin-bottom: 5px;
   font-size: 16px;
   color: #fff;
+  @media (max-width: 960px) {
+    text-align: center;
+  }
 `;
 
 export const Description = styled.div`
   font-size: 14px;
   text-align: right;
   color: #b8b8d4;
+  @media (max-width: 960px) {
+    display: none;
+  }
 `;
 
 export const IconArea = styled.div<{ active: boolean }>`
@@ -48,4 +61,7 @@ export const Point = styled.div<{ active: boolean }>`
   border: 3px solid rgb(22, 25, 92);
   margin: 0 -6px 0 30px;
   background-color: ${(props) => (props.active ? "#25cd89" : "#02044a")};
+  @media (max-width: 960px) {
+    margin: 30px 0px -36px 0px;
+  }
 `;

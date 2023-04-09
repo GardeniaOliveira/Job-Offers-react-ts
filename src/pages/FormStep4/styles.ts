@@ -4,6 +4,7 @@ export const Container = styled.div`
   border: 2px solid rgb(37, 205, 137);
   border-radius: 10px;
   padding: 20px;
+  margin: 0 20px;
 
   background-color: rgb(37, 205, 137);
   h1 {
@@ -23,13 +24,11 @@ export const Container = styled.div`
   }
 `;
 export const CardContainer = styled.div`
-  background-color: rgb(2, 6, 23);
-  height: 100%;
-  margin-top: -80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 `;
 export const Title2 = styled.div`
   text-align: center;

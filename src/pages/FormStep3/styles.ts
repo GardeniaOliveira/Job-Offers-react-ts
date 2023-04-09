@@ -45,12 +45,15 @@ export const Container = styled.div`
     padding: 10px 40px;
     border: 0;
     border-radius: 30px;
-    margin: 30px 30px 30px 0;
+    margin-right: 20px;
     cursor: pointer;
 
     .backBtn {
       text-decoration: none;
       color: rgb(22, 25, 92);
+    }
+    @media (max-width: 760px) {
+      padding: 10px 30px;
     }
   }
 `;
