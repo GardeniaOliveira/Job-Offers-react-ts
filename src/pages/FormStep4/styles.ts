@@ -77,4 +77,11 @@ export const Card = styled.div`
     font-weight: 400px;
     cursor: pointer;
   }
+  .loading {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5px;
+  }
 `;

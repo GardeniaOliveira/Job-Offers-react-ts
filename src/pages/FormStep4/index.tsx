@@ -59,7 +59,14 @@ export const FormStep4 = () => {
 
       <C.CardContainer>
         <C.Title2> Job offers</C.Title2>
-
+        {jobs.length <= 0 && (
+          <div className="loading">
+            <img
+              src="https://i.pinimg.com/originals/49/23/29/492329d446c422b0483677d0318ab4fa.gif"
+              alt="Loading..."
+            />
+          </div>
+        )}
         {jobs.map((job) => (
           <C.Card>
             <p className="job-title">{job.job_title}</p>
