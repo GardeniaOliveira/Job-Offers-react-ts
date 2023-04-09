@@ -30,12 +30,12 @@ export const FormStep1 = () => {
     if (state.name !== "") {
       if (!validName.test(state.name)) {
         setNameErr(true);
-        alert("Please enter a valid name");
+        alert("Please, enter a valid name");
       } else {
         navigate("/step2");
       }
     } else {
-      alert("Please enter your name");
+      alert("Please, enter your name");
     }
   };
 
@@ -48,7 +48,7 @@ export const FormStep1 = () => {
         <p>Fill in the field below with your name </p>
         <hr />
         <label>
-          Full name:
+          Your name:
           <input
             type="text"
             autoFocus={true}

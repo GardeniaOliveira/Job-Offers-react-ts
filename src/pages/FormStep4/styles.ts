@@ -57,4 +57,11 @@ export const Card = styled.div`
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
   }
+  a {
+    text-decoration: none;
+    color: #b8b8d4;
+    padding-left: 5px;
+    font-weight: 400px;
+    cursor: pointer;
+  }
 `;

@@ -65,22 +65,17 @@ export const FormStep4 = () => {
           <p>
             Type : <span>{job.job_employment_type}</span>{" "}
           </p>
-          <p>
-            Experience :{" "}
-            <span>
-              {job.job_required_experience.required_experience_in_months} months
-            </span>{" "}
-          </p>
+
           <p>
             Company : <span>{job.employer_name}</span>{" "}
           </p>
           <p>
-            Location : {<span>{job.job_city}</span>},
+            Location : {<span>{job.job_city}</span>} -
             {<span>{job.job_country}</span>}
           </p>
 
           <p>
-            URL :<span>{job.job_apply_link}</span>{" "}
+            URL :<a href="">{job.job_apply_link}</a>
           </p>
         </C.Card>
       ))}
