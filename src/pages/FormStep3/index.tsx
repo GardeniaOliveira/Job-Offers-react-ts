@@ -2,6 +2,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import * as C from "./styles";
 import { Theme } from "../../components/Theme";
+import { Footer } from "../../components/Footer";
 import { useForm, FormActions } from "../../contexts/FormContext";
 import { validEmail, validGithub } from "../../utils/Regex";
 
@@ -55,39 +56,42 @@ export const FormStep3 = () => {
   };
 
   return (
-    <Theme>
-      <C.Container>
-        <p>Step 3/3 </p>
-        <h1>Nice, {state.name}. Where can we find you?</h1>
+    <>
+      <Theme>
+        <C.Container>
+          <p>Step 3/3 </p>
+          <h1>Nice, {state.name}. Where can we find you?</h1>
 
-        <p>Fill in the fields below with your contacts </p>
-        <hr />
-        <label>
-          Your email:
-          <input
-            type="email"
-            value={state.email}
-            onChange={handleEmailChange}
-          />
-        </label>
+          <p>Fill in the fields below with your contacts </p>
+          <hr />
+          <label>
+            Your email:
+            <input
+              type="email"
+              value={state.email}
+              onChange={handleEmailChange}
+            />
+          </label>
 
-        <label>
-          Your GitHub:
-          <input
-            type="url"
-            value={state.github}
-            onChange={handleGithubChange}
-          />
-        </label>
+          <label>
+            Your GitHub:
+            <input
+              type="url"
+              value={state.github}
+              onChange={handleGithubChange}
+            />
+          </label>
 
-        <button>
-          {" "}
-          <Link to="/step2" className="backBtn">
-            Previous
-          </Link>{" "}
-        </button>
-        <button onClick={handleNextStep}>Finish registration</button>
-      </C.Container>
-    </Theme>
+          <button>
+            {" "}
+            <Link to="/step2" className="backBtn">
+              Previous
+            </Link>{" "}
+          </button>
+          <button onClick={handleNextStep}>Finish registration</button>
+        </C.Container>
+      </Theme>
+      <Footer />
+    </>
   );
 };

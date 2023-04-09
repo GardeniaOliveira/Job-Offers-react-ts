@@ -4,6 +4,7 @@ export const Container = styled.div`
   border: 2px solid rgb(37, 205, 137);
   border-radius: 10px;
   padding: 20px;
+
   background-color: rgb(37, 205, 137);
   h1 {
     font-size: 26px;
@@ -21,17 +22,29 @@ export const Container = styled.div`
     font-weight: 400;
   }
 `;
+export const CardContainer = styled.div`
+  background-color: rgb(2, 6, 23);
+  height: 100%;
+  margin-top: -80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 export const Title2 = styled.div`
   text-align: center;
   font-size: 24px;
-  margin: 30px 0;
+  padding-bottom: 30px;
   font-weight: bold;
+  color: white;
 `;
 export const Card = styled.div`
   border: 2px solid rgb(37, 205, 137);
   border-radius: 10px;
   padding: 20px;
-  margin: 20px 0;
+  margin: 20px;
+  max-width: 980px;
+
   h1 {
     font-size: 26px;
     margin: 0;

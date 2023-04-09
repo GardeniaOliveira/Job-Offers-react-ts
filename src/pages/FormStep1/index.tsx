@@ -4,6 +4,7 @@ import * as C from "./styles";
 import { Theme } from "../../components/Theme";
 import { useForm, FormActions } from "../../contexts/FormContext";
 import { validName } from "../../utils/Regex";
+import { Footer } from "../../components/Footer";
 
 export const FormStep1 = () => {
   const navigate = useNavigate();
@@ -40,24 +41,27 @@ export const FormStep1 = () => {
   };
 
   return (
-    <Theme>
-      <C.Container>
-        <p>Step 1/3 </p>
-        <h1>Let's start with your name</h1>
+    <>
+      <Theme>
+        <C.Container>
+          <p>Step 1/3 </p>
+          <h1>Let's start with your name</h1>
 
-        <p>Fill in the field below with your name </p>
-        <hr />
-        <label>
-          Your name:
-          <input
-            type="text"
-            autoFocus={true}
-            value={state.name}
-            onChange={handleNameChange}
-          />
-        </label>
-        <button onClick={handleNextStep}>Next</button>
-      </C.Container>
-    </Theme>
+          <p>Fill in the field below with your name </p>
+          <hr />
+          <label>
+            Your name:
+            <input
+              type="text"
+              autoFocus={true}
+              value={state.name}
+              onChange={handleNameChange}
+            />
+          </label>
+          <button onClick={handleNextStep}>Next</button>
+        </C.Container>
+      </Theme>
+      <Footer />
+    </>
   );
 };
