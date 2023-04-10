@@ -102,7 +102,8 @@ export const FormStep4 = () => {
               )}
 
               <p>
-                Apply Link :<a href="">{job.job_apply_link}</a>
+                Apply Link :
+                <a href={job.job_apply_link}>{job.job_apply_link}</a>
               </p>
             </C.Card>
           ))}

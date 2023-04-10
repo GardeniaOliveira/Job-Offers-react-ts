@@ -80,10 +80,6 @@ export const Card = styled.div`
     word-wrap: break-word;
   }
   .loading {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 5px;
+    margin-top: -100px;
   }
 `;
