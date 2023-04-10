@@ -36,6 +36,33 @@ export const Container = styled.div`
       color: #020617;
     }
   }
+  .github {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 7px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    outline: 0;
+    font-size: 16px;
+    color: #020617;
+    background-color: white;
+  }
+  .url-github {
+    color: #020617;
+    font-size: 16px;
+    padding: 8px 0 8px 8px;
+  }
+  .input-github {
+    color: #020617;
+    font-size: 16px;
+    padding: 8px 0 8px 0;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+  }
 
   button {
     background-color: #25cd89;

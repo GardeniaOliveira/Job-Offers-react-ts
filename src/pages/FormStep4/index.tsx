@@ -52,7 +52,7 @@ export const FormStep4 = () => {
             Email :<span> {state.email}</span>{" "}
           </p>
           <p>
-            GitHub :<span> {state.github}</span>{" "}
+            GitHub :<span> https://github.com/{state.github}</span>
           </p>
         </C.Container>
 

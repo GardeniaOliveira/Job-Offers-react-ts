@@ -43,10 +43,12 @@ export const FormStep3 = () => {
       if (!validEmail.test(state.email)) {
         setEmailErr(true);
         alert("Please enter a valid email");
-      } else if (!validGithub.test(state.github)) {
-        setGithubErr(true);
-        alert("Please enter a valid Github URL");
-      } else {
+      }
+      // else if (!validGithub.test(state.github)) {
+      //   setGithubErr(true);
+      //   alert("Please enter a valid Github URL");
+      // }
+      else {
         console.log(state);
         navigate("/step4");
       }
@@ -76,12 +78,15 @@ export const FormStep3 = () => {
 
           <label>
             Your GitHub:
-            <input
-              type="url"
-              placeholder="https://github.com/example"
-              value={state.github}
-              onChange={handleGithubChange}
-            />
+            <div className="github">
+              <span className="url-github">https://github.com/ </span>
+              <input
+                className="input-github"
+                type="url"
+                value={state.github}
+                onChange={handleGithubChange}
+              />
+            </div>
           </label>
 
           <button>
