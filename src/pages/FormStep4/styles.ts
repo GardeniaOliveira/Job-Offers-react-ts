@@ -4,7 +4,7 @@ export const Container = styled.div`
   border: 2px solid rgb(37, 205, 137);
   border-radius: 10px;
   padding: 20px;
-  margin: 0 20px;
+  margin: 20px 0;
 
   background-color: rgb(37, 205, 137);
   h1 {
@@ -29,7 +29,6 @@ export const CardContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  padding: 40px;
 `;
 export const Title2 = styled.div`
   text-align: center;
@@ -44,7 +43,9 @@ export const Card = styled.div`
   border: 2px solid rgb(37, 205, 137);
   border-radius: 10px;
   padding: 20px;
-  margin: 20px 0;
+  margin: 20px;
+  box-sizing: border-box;
+
   h1 {
     font-size: 26px;
     margin: 0;
@@ -76,6 +77,7 @@ export const Card = styled.div`
     padding-left: 5px;
     font-weight: 400px;
     cursor: pointer;
+    word-wrap: break-word;
   }
   .loading {
     height: 50px;

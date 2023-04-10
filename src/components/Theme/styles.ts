@@ -37,6 +37,6 @@ export const Page = styled.div`
   flex: 1;
   padding: 40px 0 0 40px;
   @media (max-width: 960px) {
-    padding: 40px;
+    padding: 20px;
   }
 `;
