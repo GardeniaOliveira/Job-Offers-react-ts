@@ -17,7 +17,7 @@ type ContextType = {
 const initialData: State = {
   currentStep: 0,
   name: "",
-  title: "",
+  title: "Junior",
   level: 0,
   email: "",
   github: "",
