@@ -87,13 +87,13 @@ export const FormStep3 = () => {
             </div>
           </label>
 
-          <button>
+          <C.Button>
             {" "}
             <Link to="/step2" className="backBtn">
               Previous
             </Link>{" "}
-          </button>
-          <button onClick={handleNextStep}>Finish</button>
+          </C.Button>
+          <C.Button onClick={handleNextStep}>Finish</C.Button>
         </C.Container>
       </Theme>
       <Footer />

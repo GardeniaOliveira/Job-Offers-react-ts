@@ -79,13 +79,13 @@ export const FormStep2 = () => {
               setTitle("Senior");
             }}
           />
-          <button>
+          <C.Button>
             {" "}
             <Link to="/" className="backBtn">
               Previous
             </Link>{" "}
-          </button>
-          <button onClick={handleNextStep}>Next</button>
+          </C.Button>
+          <C.Button onClick={handleNextStep}>Next</C.Button>
         </C.Container>
       </Theme>
       <Footer />

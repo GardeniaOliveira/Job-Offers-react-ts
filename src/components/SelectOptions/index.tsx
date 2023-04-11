@@ -12,6 +12,7 @@ export const SelectOptions = ({
   description,
   icon,
   selected,
+
   onClick,
 }: Props) => {
   return (

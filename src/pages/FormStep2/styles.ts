@@ -34,25 +34,23 @@ export const Container = styled.div`
       color: #020617;
     }
   }
+`;
 
-  button {
-    background-color: #25cd89;
-    color: #020617;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px 40px;
-    border: 0;
-    border-radius: 30px;
-    margin-right: 20px;
-    margin-top: 10px;
-    cursor: pointer;
-
-    .backBtn {
-      text-decoration: none;
-      color: rgb(22, 25, 92);
-    }
-    @media (max-width: 760px) {
-      padding: 10px 30px;
-    }
+export const Button = styled.button`
+  background-color: #25cd89;
+  color: #020617;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 40px;
+  border: 0;
+  border-radius: 30px;
+  margin: 10px 20px 0 0;
+  cursor: pointer;
+  .backBtn {
+    text-decoration: none;
+    color: rgb(22, 25, 92);
+  }
+  @media (max-width: 760px) {
+    padding: 10px 30px;
   }
 `;

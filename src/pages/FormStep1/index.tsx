@@ -59,7 +59,7 @@ export const FormStep1 = () => {
               onChange={handleNameChange}
             />
           </label>
-          <button onClick={handleNextStep}>Next</button>
+          <C.Button onClick={handleNextStep}>Next</C.Button>
         </C.Container>
       </Theme>
       <Footer />

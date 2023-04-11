@@ -34,16 +34,16 @@ export const Container = styled.div`
       color: #020617;
     }
   }
+`;
 
-  button {
-    background-color: #25cd89;
-    color: #020617;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px 40px;
-    border: 0;
-    border-radius: 30px;
-    margin-top: 30px;
-    cursor: pointer;
-  }
+export const Button = styled.button`
+  background-color: #25cd89;
+  color: #020617;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 40px;
+  border: 0;
+  border-radius: 30px;
+  margin-top: 30px;
+  cursor: pointer;
 `;
