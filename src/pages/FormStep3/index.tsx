@@ -43,12 +43,10 @@ export const FormStep3 = () => {
       if (!validEmail.test(state.email)) {
         setEmailErr(true);
         alert("Please enter a valid email");
-      }
-      // else if (!validGithub.test(state.github)) {
-      //   setGithubErr(true);
-      //   alert("Please enter a valid Github URL");
-      // }
-      else {
+      } else if (!validGithub.test(state.github)) {
+        setGithubErr(true);
+        alert("Please enter a valid Github URL");
+      } else {
         console.log(state);
         navigate("/step4");
       }

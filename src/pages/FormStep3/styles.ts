@@ -42,25 +42,21 @@ export const Container = styled.div`
     justify-content: center;
     box-sizing: border-box;
     width: 100%;
-    margin-top: 7px;
     border: 1px solid transparent;
     border-radius: 30px;
     outline: 0;
-    font-size: 16px;
-    color: #020617;
     background-color: white;
+    font-size: 16px;
   }
   .url-github {
     color: #020617;
-    font-size: 16px;
-    padding: 8px 0 8px 8px;
+    padding: 0 0 8px 8px;
   }
   .input-github {
     color: #020617;
-    font-size: 16px;
-    padding: 8px 0 8px 0;
+    padding-left: 0;
+    margin: 0;
     border: none;
-    border-radius: 30px;
     outline: none;
   }
 

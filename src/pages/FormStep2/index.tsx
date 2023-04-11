@@ -49,7 +49,7 @@ export const FormStep2 = () => {
           <hr />
           <SelectOptions
             title="I'm Junior"
-            description="I'm a developer for less than two years"
+            description="I'm a developer for less than three years"
             icon="🥳"
             selected={state.level === 0}
             onClick={() => {
