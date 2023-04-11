@@ -4,13 +4,14 @@ import * as C from "./styles";
 import { Theme } from "../../components/Theme";
 import { Footer } from "../../components/Footer";
 import { useForm, FormActions } from "../../contexts/FormContext";
-import { validEmail } from "../../utils/Regex";
+import { validEmail, validGithub } from "../../utils/Regex";
 
 export const FormStep3 = () => {
   const navigate = useNavigate();
   //state has the data and dispatch changes the data
   const { state, dispatch } = useForm();
   const [_, setEmailErr] = useState(false);
+  const [__, setGithubErr] = useState(false);
 
   useEffect(() => {
     if (state.name === "") {
@@ -42,6 +43,9 @@ export const FormStep3 = () => {
       if (!validEmail.test(state.email)) {
         setEmailErr(true);
         alert("Please enter a valid email");
+      } else if (!validGithub.test(state.github)) {
+        setGithubErr(true);
+        alert("Please enter a valid Github URL");
       } else {
         console.log(state);
         navigate("/step4");
